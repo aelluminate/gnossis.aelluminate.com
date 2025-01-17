@@ -2,13 +2,13 @@
   "title": "Python",
   "icon": "BadgeCheck",
   "pages": [
-    "sum_of_even_digits",
-    "count_vowels",
-    "largest_number",
-    "is_palindrome",
-    "second_largest",
-    "longest_word",
-    "number_to_words",
-    "palindrome_number"
+    "sum-of-even-digits",
+    "count-vowels",
+    "largest-number",
+    "is-palindrome",
+    "second-largest",
+    "longest-word",
+    "number-to-words",
+    "number-to-roman"
   ]
 }
