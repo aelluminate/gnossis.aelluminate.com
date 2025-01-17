@@ -9,7 +9,7 @@ export const Footer = () => {
       <div className="flex flex-col gap-4 px-10 sm:flex-row sm:items-end sm:justify-between">
         <div>
           <p className="mb-1 text-sm font-semibold">Gnossis</p>
-          <p className="text-xs">All rights reserved. © {new Date().getFullYear()}</p>
+          <p className="text-xs">All rights reserved. © {new Date().getFullYear()} Aelluminate</p>
         </div>
         <div className="flex items-center gap-4 text-xs">
           <Link

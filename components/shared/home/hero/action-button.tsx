@@ -17,9 +17,11 @@ const ActionButton: FC = () => {
       >
         <Button size="lg" asChild>
           <Link
-            href="/resources/colors"
-            aria-label="Explore resources"
+            href="https://github.com/aelluminate/gnossis.aelluminate.com/issues"
+            aria-label="Wanna Contribute?"
             className="flex items-center gap-2"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             <GithubIcon className="h-5 w-5" />
             Wanna Contribute?
@@ -33,7 +35,12 @@ const ActionButton: FC = () => {
         exit={{ opacity: 0, y: 20 }}
       >
         <Button variant="outline" size="lg" asChild>
-          <Link href="/guides" aria-label="Learn guides">
+          <Link
+            href="https://www.linkedin.com/company/aelluminate/"
+            aria-label="Be part of the team"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
             Be part of the team!
           </Link>
         </Button>
