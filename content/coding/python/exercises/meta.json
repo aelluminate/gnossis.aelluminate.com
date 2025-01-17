@@ -1,0 +1,5 @@
+{
+	"title": "Python",
+  "icon": "Zap",
+  "pages": ["basics", "variables-and-data-types"]
+}

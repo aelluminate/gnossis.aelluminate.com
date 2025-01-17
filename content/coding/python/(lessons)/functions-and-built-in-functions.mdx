@@ -1,0 +1,78 @@
+---
+title: Functions and Built-in Functions
+---
+
+Functions are reusable blocks of code that perform a specific task. They help organize code, make it more readable, and allow for code reuse. In Python, functions are defined using the `def` keyword.
+
+# Defining a Function and Calling a Function
+
+To define a function, you use the `def` keyword followed by the function name and parentheses `()`. You can also specify parameters inside the parentheses. The function body is indented and contains the code that the function executes.
+
+```python title="Example"
+def greet(name):
+    return f"Hello, {name}!"
+
+print(greet("Alice"))
+```
+```plaintext title="Output"
+Hello, Alice!
+```
+
+# Function Parameters and Return Values
+
+Functions can take parameters, which are values passed to the function when it is called. Parameters are specified inside the parentheses when defining the function. Functions can also return values using the `return` statement.
+
+```python title="Example"
+def add(a, b=0):
+    return a + b
+
+print(add(5))
+print(add(5, 3))
+```
+```plaintext title="Output"
+5
+8
+```
+
+## Scope of Variables
+
+Variables defined inside a function are local to that function and cannot be accessed outside the function. Variables defined outside a function are global and can be accessed inside the function.
+
+```python title="Example"
+x = 10  # Global variable
+def my_function():
+    y = 5  # Local variable
+    return x + y
+
+print(my_function())
+```
+```plaintext title="Output"
+15
+```
+
+## Built-in Functions
+
+Python provides a set of built-in functions that are always available. These functions are used for common tasks such as converting data types, working with sequences, and performing mathematical operations.
+
+- `print()`: Prints the specified value.
+- `len()`: Returns the length of an object.
+- `type()`: Returns the type of an object.
+- `int()`, `float()`, `str()`: Convert values to integers, floats, and strings, respectively.
+- `input()`: Reads a line of input from the user.
+- `max()`, `min()`: Returns the maximum or minimum value in a sequence.
+- `sum()`: Returns the sum of a sequence of numbers.
+- `sorted()`: Returns a sorted list of the specified iterable.
+- and many more...
+
+```python title="Example"
+numbers = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3]
+
+print(len(numbers))
+print(sum(numbers))
+print(sorted(numbers))
+```
+```plaintext title="Output"
+10
+39
+[1, 1, 2, 3, 3, 4, 5, 5, 6, 9]
+```

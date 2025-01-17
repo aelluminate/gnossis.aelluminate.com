@@ -1,0 +1,105 @@
+---
+title: Exceptions
+---
+
+Python exceptions are events that occur during the execution of a program and disrupt the normal flow of the program’s instructions. When an exception is raised, it indicates that an error has occurred. Python provides a way to handle these exceptions using `try-except` blocks, allowing developers to manage errors gracefully and ensure the program can continue or exit smoothly.
+
+## What is an Exception?
+
+An exception is an error that occurs during the execution of a program. When an exception is raised, the program stops executing the current block of code and jumps to the nearest `except` block to handle the exception. If the exception is not handled, the program will terminate with an error message.
+
+## Using `try` and `except` Blocks
+
+To handle exceptions in Python, you can use `try` and `except` blocks. The `try` block contains the code that may raise an exception, and the `except` block handles the exception if it occurs.
+
+```python title="Example"
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+```
+
+In the example above, the `try` block attempts to divide `10` by `0`, which will raise a `ZeroDivisionError`. The `except` block catches the exception and prints a message indicating that division by zero is not allowed.
+
+## Handling Multiple Exceptions
+
+You can handle multiple exceptions by specifying multiple `except` blocks. Each `except` block can handle a different type of exception.
+
+```python title="Example"
+try:
+    result = 10 / 0  # This will raise a ZeroDivisionError
+except ZeroDivisionError:
+    print("You cannot divide by zero!")
+except ValueError:
+    print("Invalid input!")
+```
+
+In the example above, we have added a second `except` block to handle a `ValueError`. If the division operation raises a `ValueError`, the second `except` block will be executed to handle the exception. Here's an another example:
+
+```python title="Example"
+try:
+    value = int(input("Enter a number: "))
+    result = 10 / value
+except (ValueError, ZeroDivisionError) as e:
+    print(f"An error occurred: {e}")
+```
+
+In this example, we use a single `except` block to catch both `ValueError` and `ZeroDivisionError` exceptions. The exception object `e` is used to print the error message.
+
+## Using the `finally` Block
+
+The `finally` block is used to execute code that should always run, regardless of whether an exception occurs or not. This block is commonly used to perform cleanup operations such as closing files or releasing resources.
+
+```python title="Example"
+try:
+    file = open("example.txt", "r")
+    content = file.read()
+    print(content)
+except FileNotFoundError:
+    print("File not found!")
+finally:
+    file.close()
+```
+
+In the example above, the `finally` block ensures that the file is closed even if an exception occurs while reading the file. This helps prevent resource leaks and ensures that the file is properly closed.
+
+## Raise an Exception
+
+You can raise exceptions in your code using the `raise` statement. This allows you to create custom exceptions and handle them in your program.
+
+```python title="Example"
+def check_positive(number):
+    if number < 0:
+        raise ValueError("The number must be positive.")
+    return number
+
+try:
+    check_positive(-5)
+except ValueError as e:
+    print(e)
+```
+```plaintext title="Output"
+The number must be positive.
+```
+
+In the example above, the `check_positive` function raises a `ValueError` if the input number is negative. The `except` block catches the exception and prints the error message.
+
+## Custom Exceptions
+
+You can define custom exceptions by creating a new class that inherits from the `Exception` class. This allows you to create specialized exceptions for your application.
+
+```python title="Example"
+class CustomError(Exception):
+    pass
+
+def raise_custom_error():
+    raise CustomError("This is a custom error.")
+
+try:
+    raise_custom_error()
+except CustomError as e:
+    print(e)
+```
+```plaintext title="Output"
+This is a custom error.
+```

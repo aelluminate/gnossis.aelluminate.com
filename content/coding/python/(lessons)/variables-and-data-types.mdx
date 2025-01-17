@@ -1,0 +1,124 @@
+---
+title: Variables and Data Types
+---
+
+In Python, a variable is a name that refers to a value. Variables are used to store data that can be referenced and manipulated in a program. Python is dynamically typed, meaning you do not need to declare the type of a variable when you create it.
+
+# Creating Variables
+
+To create a variable, you simply assign a value to a name using the `=` operator.
+
+```python
+x = 5          # Integer
+y = 3.14       # Float
+name = "Alice" # String
+is_student = True # Boolean
+```
+
+In the example above, we have created four variables: `x`, `y`, `name`, and `is_student`. The variables store an integer, a float, a string, and a boolean value, respectively
+
+# Naming Conventions
+
+When naming variables, you should follow these conventions:
+
+- Variable names must start with a letter (a-z, A-Z) or an underscore (`_`).
+- The rest of the variable name may consist of letters, numbers (0-9), and underscores.
+- Variable names are case-sensitive (`name`, `Name`, and `NAME` are three different variables).
+- Variable names should be descriptive and meaningful.
+- Avoid using Python reserved keywords as variable names such as `print`, `if`, `else`, `for`, `while`, and etc.
+
+Examples of valid variable names:
+
+```python
+my_variable = 42
+name = "Alice"
+is_student = True
+_age = 25
+```
+
+Examples of invalid variable names:
+
+```python
+2nd_number = 10  # Variable name cannot start with a number
+my-variable = 3.14  # Variable name cannot contain hyphens
+```
+
+## Data Types
+
+Python has several built-in data types that are used to represent different kinds of data. The most common data types include:
+
+### Numeric Types
+
+- **int**: Integer values such as `42`, `-10`, `0`.
+- **float**: Floating-point values such as `3.14`, `-0.001`, `2.0`.
+- **complex**: Complex numbers such as `3 + 4j`, `1 - 2j`.
+
+### Text Type
+
+- **str**: String values such as `"Hello"`, `"Python"`, `"42"`.
+
+NOTE: Strings are sequences of characters enclosed in single, or double quotes.
+
+### Boolean Type
+
+- **bool**: Boolean values `True` and `False`.
+
+### Sequence Types
+
+- **list**: Ordered, mutable collection of items.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+```
+
+- **tuple**: Ordered, immutable collection of items.
+
+```python
+colors = ("red", "green", "blue")
+```
+
+- **range**: Sequence of numbers.
+
+```python
+numbers = range(5) # 0, 1, 2, 3, 4
+```
+
+### Mapping Type
+
+- **dict**: Unordered collection of key-value pairs.
+
+```python
+person = {"name": "Alice", "age": 25}
+```
+
+## Type Conversion
+
+You can convert between different data types using type conversion functions such as `int()`, `float()`, `str()`, `list()`, `tuple()`, and `dict()`.
+
+```python
+# Convert string to integer
+num_str = "10"
+num_int = int(num_str)  # num_int is now 10
+
+# Convert integer to string
+num = 5
+num_str = str(num)  # num_str is now "5"
+```
+
+### Checking Data Types
+
+You can check the data type of a variable using the `type()` function.
+
+```python
+x = 5
+print(type(x))  # Output: <class 'int'>
+
+y = 3.14
+print(type(y))  # Output: <class 'float'>
+
+name = "Alice"
+print(type(name))  # Output: <class 'str'>
+
+is_student = True
+print(type(is_student))  # Output: <class 'bool'>
+```

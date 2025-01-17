@@ -1,0 +1,130 @@
+---
+title: Loops
+---
+
+Loops are used in programming to execute a block of code repeatedly as long as a specified condition is true. Python has two main types of loops: `for` loops and `while` loops.
+
+## `for` Loop
+
+The `for` loop is used to iterate over a sequence (e.g., list, tuple, string) and execute a block of code for each item in the sequence.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+
+``` 
+```plaintext
+apple 
+banana 
+cherry
+``` 
+
+Using `range()` with `for` loop:
+
+```python
+for i in range(5):
+    print(i)
+
+```
+```plaintext
+0
+1
+2
+3
+4
+```
+
+## `while` Loop
+
+The `while` loop is used to repeat a block of code as long as the condition is true.
+
+```python
+i = 0
+
+while i < 5:
+    print(i)
+    i += 1
+
+``` 
+```plaintext
+0
+1
+2
+3
+4
+```
+
+## `break` Statement
+
+The `break` statement is used to exit the loop prematurely.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+    if fruit == "banana":
+        break
+
+```
+```plaintext
+apple
+banana
+```
+
+## `continue` Statement
+
+The `continue` statement is used to skip the rest of the code inside the loop for the current iteration.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    if fruit == "banana":
+        continue
+    print(fruit)
+```
+```
+Output:
+apple
+cherry
+```
+
+## `else` Clause
+
+The `else` clause is executed when the loop is finished, but not when the loop is terminated by a `break` statement.
+
+```python
+fruits = ["apple", "banana", "cherry"]
+
+for fruit in fruits:
+    print(fruit)
+else:
+    print("Finished!")
+```
+```plaintext
+apple
+banana
+cherry
+Finished!
+```
+
+## Nested Loops
+
+You can use one or more loops inside another loop. This is called nested loops.
+
+```python
+for i in range(3):  # Outer loop
+    for j in range(2):  # Inner loop
+        print(f"i: {i}, j: {j}")
+```
+```plaintext
+i: 0, j: 0
+i: 0, j: 1
+i: 1, j: 0
+i: 1, j: 1
+i: 2, j: 0
+i: 2, j: 1
+```

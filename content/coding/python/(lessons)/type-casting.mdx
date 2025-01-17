@@ -1,0 +1,148 @@
+---
+title: Type Casting
+---
+
+Type casting is the process of converting a variable from one data type to another. In Python, this is often necessary when performing operations that require specific data types. Python provides several built-in functions for type casting.
+
+## Common Data Types in Python
+
+Before we dive into type casting, let's review some common data types in Python:
+
+- **int**: Integer values such as `42`, `-10`, `0`.
+- **float**: Floating-point values such as `3.14`, `-0.001`, `2.0`.
+- **str**: String values such as `"Hello"`, `"Python"`, `"42"`.
+- **bool**: Boolean values `True` and `False`.
+
+## Type Casting Functions
+
+Here are some common type casting functions in Python:
+
+- `int()`: Converts a value to an integer.
+- `float()`: Converts a value to a float.
+- `str()`: Converts a value to a string.
+- `bool()`: Converts a value to a boolean.
+
+## Convert to Integer
+
+To convert a value to an integer, you can use the `int()` function. If the value cannot be converted to an integer, a `ValueError` will be raised.
+
+```python title="Example"
+num_str = "10"
+num_int = int(num_str)
+print(num_int)
+```
+```plaintext title="Output"
+10
+```
+
+## Convert to Float
+
+To convert a value to a float, you can use the `float()` function. If the value cannot be converted to a float, a `ValueError` will be raised.
+
+```python title="Example"
+num_str = "3.14"
+num_float = float(num_str)
+print(num_float)
+```
+```plaintext title="Output"
+3.14
+```
+
+## Convert to String
+
+To convert a value to a string, you can use the `str()` function. This function works for most data types.
+
+```python title="Example"
+num_int = 42
+num_str = str(num_int)
+print(num_str)
+```
+```plaintext title="Output"
+42
+```
+
+## Convert to Boolean
+
+To convert a value to a boolean, you can use the `bool()` function. The following values are considered `False`:
+
+- `False`
+- `0` (integer)
+- `0.0` (float)
+- `""` (empty string)
+- `[]` (empty list)
+- `{}` (empty dictionary)
+- `()` (empty tuple)
+- `None`
+
+All other values are considered `True`.
+
+```python title="Example"
+print(bool(0))
+print(bool(42))
+print(bool(""))
+print(bool("Hello"))
+```
+```plaintext title="Output"
+False
+True
+False
+True
+```
+
+## Type Casting in Pratice
+
+Type casting is often used when working with user input, file I/O, and mathematical operations. Here are some examples:
+
+```python title="Example"
+# Convert user input to integer
+age_str = input("Enter your age: ")
+age = int(age_str)
+
+# Perform mathematical operations
+# Note: The input() function returns a string, so we need to convert it to an integer.
+num1 = int(input("Enter the first number: "))
+num2 = int(input("Enter the second number: "))
+result = num1 + num2
+print(f"The sum is: {result}")
+```
+
+## Type Casting with Lists
+
+You can also use type casting functions to convert lists of values to a different data type. For example, you can convert a list of strings to a list of integers.
+
+```python title="Example"
+num_strs = ["1", "2", "3", "4", "5"]
+num_ints = [int(num) for num in num_strs]
+print(num_ints)
+```
+```plaintext title="Output"
+[1, 2, 3, 4, 5]
+```
+
+## Type Checking
+
+You can check the data type of a variable using the `type()` function. This can be useful when debugging or validating input data.
+
+```python title="Example"
+x = 5
+print(type(x))
+
+y = 3.14
+print(type(y))
+
+name = "Alice"
+print(type(name))
+```
+```plaintext title="Output"
+<class 'int'>
+<class 'float'>
+<class 'str'>
+```
+
+## Common Use Cases for Type Casting
+
+- **User Input**: Convert user input to the appropriate data type.
+- **File I/O**: Convert data read from files to the desired data type.
+- **Mathematical Operations**: Ensure that operands are of the correct data type.
+- **Data Validation**: Check if the input data is of the expected type.
+- and many more...

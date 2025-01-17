@@ -1,6 +1,14 @@
 {
-	"title": "Python",
+  "title": "Python",
   "icon": "Code",
   "defaultOpen": true,
-  "pages": ["..."]
+  "pages": [
+    "/(lessons)/introduction",
+    "/(lessons)/variables-and-data-types",
+    "/(lessons)/conditionals",
+    "/(lessons)/loops",
+    "/(lessons)/functions-and-built-in-functions",
+    "/(lessons)/type-casting",
+    "/(lessons)/exceptions"
+  ]
 }

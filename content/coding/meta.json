@@ -1,4 +1,12 @@
 {
-	"title": "Programming Languages",
-	"pages": ["index", "---Languages---", "..."]
+  "title": "Programming Languages",
+  "pages": [
+    "index",
+    "---Languages---",
+    "./python",
+    "./sql",
+    "---Exercises---",
+    "./python/exercises",
+    "---Quizzes & Exams---"
+  ]
 }
