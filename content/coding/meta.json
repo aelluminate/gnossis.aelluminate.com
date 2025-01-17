@@ -5,8 +5,10 @@
     "---Languages---",
     "./python",
     "./sql",
-    "---Exercises---",
-    "./python/exercises",
+    "---Frameworks / Libraries---",
+    "./pandas",
+    "---Activities---",
+    "./python/activities",
     "---Quizzes & Exams---",
     "./python/quizzes",
     "./python/exams"

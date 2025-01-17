@@ -1,0 +1,13 @@
+{
+	"title": "Python",
+  "icon": "Zap",
+  "defaultOpen": true,
+  "pages": [
+    "group-banking-system", 
+    "group-social-media",
+    "group-digital-marketing",
+    "group-sales-tracking-system",
+    "group-airlines-management",
+    "group-traffic-optimization"
+  ]
+}
