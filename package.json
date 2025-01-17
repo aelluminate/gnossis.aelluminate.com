@@ -5,7 +5,7 @@
   "scripts": {
     "build": "next build",
     "dev": "next dev --turbopack",
-    "rebuild": "rm -rf .next && .content-collections",
+    "rebuild": "rm -rf .next && rm -rf .content-collections",
     "start": "next start",
     "lint": "next lint"
   },
