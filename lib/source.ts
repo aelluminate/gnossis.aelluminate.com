@@ -2,6 +2,7 @@ import * as React from "react"
 import { icons } from "lucide-react"
 import { loader } from "fumadocs-core/source"
 import { createMDXSource } from "@fumadocs/content-collections"
+import { attachFile } from 'fumadocs-openapi/server';
 
 import { allComputerScienceMetas, allCodingMetas, allComputerSciences, allCodings } from "content-collections"
 
@@ -27,4 +28,7 @@ export const coding = loader({
       })
   },
   source: createMDXSource(allCodings, allCodingMetas),
+  pageTree: {
+    attachFile,
+  }
 })
