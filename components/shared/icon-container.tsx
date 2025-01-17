@@ -22,5 +22,3 @@ export function IconContainer({
     </div>
   )
 }
-
-export default IconContainer
