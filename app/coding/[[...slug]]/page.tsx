@@ -24,8 +24,8 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
     <DocsPage
       lastUpdate={time ? new Date(time) : new Date()}
       tableOfContent={{
+        header: page.data.title,
         style: "clerk",
-        single: false,
       }}
       editOnGithub={{
         repo: "gnossis",
