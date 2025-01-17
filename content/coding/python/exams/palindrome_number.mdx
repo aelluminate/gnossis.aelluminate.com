@@ -1,0 +1,77 @@
+---
+title: "Palindrome Number"
+---
+
+Write a Python function `palindrome_with_twist(num)` that takes an integer `num` (where `0 <= num <= 10^6`) as input and returns `True` if the number is a palindrome with a twist. Otherwise, return `False`.
+
+A number is a palindrome with a twist if:
+
+1. The number itself is a palindrome (reads the same backward as forward).
+2. The sum of the digits of the number is also a palindrome.
+
+If the input is `0`, return `True`.
+
+<Callout title="Example" type="info">
+Input: `121` <br />
+Output: `True` <br />
+Explanation:
+    - The number `121` is a palindrome.
+    - The sum of the digits is `1 + 2 + 1 = 4`, which is also a palindrome.
+</Callout>
+<Callout title="Example" type="info">
+Input: `12321` <br />
+Output: `False` <br />
+Explanation:
+- The number `12321` is a palindrome.
+- The sum of its digits is `1 + 2 + 3 + 2 + 1 = 9`, which is a palindrome.
+- However, the twist condition is not satisfied because the sum of the digits (`9`) is not a multi-digit palindrome.
+</Callout>
+<Callout title="Example" type="info">
+Input: `11` <br />
+Output: `True` <br />
+Explanation:
+- `11` is a palindrome.
+- The sum of its digits is `1 + 1 = 2`, which is a palindrome.
+</Callout>
+<Callout title="Example" type="info">
+Input: `123` <br />
+Output: `False` <br />
+Explanation:
+- `123` is not a palindrome.
+</Callout>
+<Callout title="Example" type="info">
+Input: `0` <br />
+Output: `True` <br />
+Explanation:
+- `0` is a palindrome, and the sum of its digits is `0`, which is also a palindrome.
+</Callout>
+
+
+## Instructions
+
+1. Implement the function `palindrome_with_twist(num)` in the file `solution.py`.
+2. Do not use any external libraries or advanced Python features (e.g., list comprehensions, lambda functions, etc.).
+3. Use only the following Python concepts:
+   - Variables and Data Types
+   - Conditionals
+   - Loops
+   - Type Casting
+4. Test your solution by running `test.py`. The script will automatically check your implementation against 10 test cases.
+
+## Hints
+
+1. Break the problem into smaller parts:
+    - Check if the number is a palindrome.
+    - Calculate the sum of the digits of the number.
+    - Check if the sum of the digits is a palindrome.
+2. Use loops to reverse the number and calculate the sum of its digits.
+3. Use conditionals to handle edge cases, such as `0` and single-digit numbers.
+4. Pay attention to the twist condition: the sum of the digits must also be a palindrome.
+
+## Solution
+
+```python title="solution.py"
+def palindrome_with_twist(num):
+    # Remove the pass statement and write your code here!
+    pass
+```

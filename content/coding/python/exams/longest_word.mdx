@@ -1,0 +1,63 @@
+---
+title: "Longest Word"
+---
+
+## Problem Statement
+
+Write a Python function `longest_word(sentence)` that takes a string `sentence` as input and returns the longest word in the sentence. If there are multiple words with the same longest length, return the first one encountered. Assume that words are separated by spaces and that the sentence contains no punctuation.
+
+<Callout title="Example" type="info">
+Input: `"The quick brown fox jumps over the lazy dog"` <br />
+Output: `"quick"` (because "quick" is the longest word)
+</Callout>
+<Callout title="Example" type="info">
+Input: `"Python is fun"` <br />
+Output: `"Python` (because "Python" is the longest word)
+</Callout>
+<Callout title="Example" type="info">
+Input: `"Hello world"` <br />
+Output: `"Hello"` (all words are of the same length, return the first one)
+</Callout>
+<Callout title="Example" type="info">
+Input: `"A B C D E"` <br />
+Output: `"A"` (all words are of the same length, return the first one)
+</Callout>
+
+## Instructions
+
+1. Implement the function `longest_word(sentence)` in the file `solution.py`.
+2. Do not use any external libraries or advanced Python features (e.g., built-in functions like `max()`, list comprehensions, etc.).
+3. Use only the following Python concepts:
+   - Variables and Data Types
+   - Conditionals
+   - Loops
+   - Type Casting
+4. Test your solution by running `test.py`. The script will automatically check your implementation against 10 test cases.
+
+## Hints
+
+1. Split the sentence into words using the `split()` method.
+2. Initialize a variable to store the longest word and its leng
+3. Loop through each word and update the longest word if the current word is longer.
+4. Handle edge cases where all words are of the same length.
+
+## Solution
+
+```python title="solution.py"
+def longest_word(sentence):
+    # Split the sentence into words
+    words = sentence.split()
+
+    # Check if there are no words
+    if not words:
+        return None
+
+    longest = words[0]  # Assume the first word is the longest
+
+    # Loop through each word and update the longest word
+    for word in words:
+        if len(word) > len(longest):
+            longest = word
+
+    return longest
+```

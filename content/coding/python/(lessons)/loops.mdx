@@ -8,27 +8,25 @@ Loops are used in programming to execute a block of code repeatedly as long as a
 
 The `for` loop is used to iterate over a sequence (e.g., list, tuple, string) and execute a block of code for each item in the sequence.
 
-```python
+```python title="Example"
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
     print(fruit)
-
-``` 
-```plaintext
-apple 
-banana 
+```
+```plaintext title="Output"
+apple
+banana
 cherry
-``` 
+```
 
 Using `range()` with `for` loop:
 
-```python
+```python title="Example"
 for i in range(5):
     print(i)
-
 ```
-```plaintext
+```plaintext title="Output"
 0
 1
 2
@@ -40,15 +38,14 @@ for i in range(5):
 
 The `while` loop is used to repeat a block of code as long as the condition is true.
 
-```python
+```python title="Example"
 i = 0
 
 while i < 5:
     print(i)
     i += 1
-
-``` 
-```plaintext
+```
+```plaintext title="Output"
 0
 1
 2
@@ -60,16 +57,15 @@ while i < 5:
 
 The `break` statement is used to exit the loop prematurely.
 
-```python
+```python title="Example"
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
     print(fruit)
     if fruit == "banana":
         break
-
 ```
-```plaintext
+```plaintext title="Output"
 apple
 banana
 ```
@@ -78,7 +74,7 @@ banana
 
 The `continue` statement is used to skip the rest of the code inside the loop for the current iteration.
 
-```python
+```python title="Example"
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
@@ -86,7 +82,7 @@ for fruit in fruits:
         continue
     print(fruit)
 ```
-```
+```plaintext title="Output"
 Output:
 apple
 cherry
@@ -96,7 +92,7 @@ cherry
 
 The `else` clause is executed when the loop is finished, but not when the loop is terminated by a `break` statement.
 
-```python
+```python title="Example"
 fruits = ["apple", "banana", "cherry"]
 
 for fruit in fruits:
@@ -104,7 +100,7 @@ for fruit in fruits:
 else:
     print("Finished!")
 ```
-```plaintext
+```plaintext title="Output"
 apple
 banana
 cherry
@@ -115,12 +111,12 @@ Finished!
 
 You can use one or more loops inside another loop. This is called nested loops.
 
-```python
+```python title="Example"
 for i in range(3):  # Outer loop
     for j in range(2):  # Inner loop
         print(f"i: {i}, j: {j}")
 ```
-```plaintext
+```plaintext title="Output"
 i: 0, j: 0
 i: 0, j: 1
 i: 1, j: 0

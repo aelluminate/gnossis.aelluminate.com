@@ -1,0 +1,14 @@
+{
+  "title": "Python",
+  "icon": "BadgeCheck",
+  "pages": [
+    "sum_of_even_digits",
+    "count_vowels",
+    "largest_number",
+    "is_palindrome",
+    "second_largest",
+    "longest_word",
+    "number_to_words",
+    "palindrome_number"
+  ]
+}

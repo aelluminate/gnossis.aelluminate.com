@@ -1,0 +1,53 @@
+---
+title: "Is Palindrome"
+---
+
+## Problem Statement
+
+Write a Python function `is_palindrome(s)` that takes a string `s` as input and returns `True` if the string is a palindrome, and `False` otherwise. A palindrome is a string that reads the same backward as forward. Ignore case and non-alphanumeric characters.
+
+<Callout title="Example" type="info">
+Input: `"A man, a plan, a canal: Panama"` <br />
+Output: `True` (because it reads the same backward when ignoring case and non-alphanumeric characters)
+</Callout>
+<Callout title="Example" type="info">
+Input: `"race a car"` <br />
+Output: `False` (because it does not read the same backward)
+</Callout>
+<Callout title="Example" type="info">
+Input: `"No lemon, no melon"` <br />
+Output: `True` (because it reads the same backward when ignoring case and non-alphanumeric characters)
+</Callout>
+
+## Instructions
+
+1. Implement the function `is_palindrome(s)` in the file `solution.py`.
+2. Do not use any external libraries or advanced Python features (e.g., regular expressions, list comprehensions, etc.).
+3. Use only the following Python concepts:
+   - Variables and Data Types
+   - Conditionals
+   - Loops
+   - Type Casting
+4. Test your solution by running `test.py`. The script will automatically check your implementation against 10 test cases.
+
+## Hints
+
+1. Remove non-alphanumeric characters and convert the string to lowercase.
+2. Compare the string with its reverse.
+3. Use a loop or string slicing to reverse the string.
+
+## Solution
+
+```python title="solution.py"
+def is_palindrome(s):
+    # Remove non-alphanumeric characters and convert to lowercase
+    cleaned = ""
+
+    # Loop through each character in the string
+    for char in s:
+        if char.isalnum():
+            cleaned += char.lower()
+
+    # Compare the cleaned string with its reverse
+    return cleaned == cleaned[::-1]
+```

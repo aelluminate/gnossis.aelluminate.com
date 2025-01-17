@@ -1,0 +1,53 @@
+---
+title: "Count Vowels"
+---
+
+## Problem Statement
+
+Write a Python function `count_vowels(s)` that takes a string `s` as input and returns the total number of vowels in the string. The vowels to consider are `a`, `e`, `i`, `o`, and `u` (both lowercase and uppercase).
+
+<Callout title="Example" type="info">
+Input: `'Hello, World!'` <br />
+Output: `3` (because `e`, `o`, and `o` are vowels)
+</Callout>
+<Callout title="Example" type="info">
+Input: `'Python Programming'` <br />
+Output: `4` (because `o`, `o`, `a`, and `i` are vowels)
+</Callout>
+<Callout title="Example" type="info">
+Input: `'AEIOU'` <br />
+Output: `5` (all characters are vowels)
+</Callout>
+
+## Instructions
+
+1. Implement the function `count_vowels(s)` in the file `solution.py`.
+2. Do not use any external libraries or advanced Python features (e.g., list comprehensions, lambda functions, etc.).
+3. Use only the following Python concepts:
+   - Variables and Data Types
+   - Conditionals
+   - Loops
+   - Type Casting
+4. Test your solution by running `test.py`. The script will automatically check your implementation against 10 test cases.
+
+## Hints
+
+1. Loop through each character in the string.
+2. Use a conditional statement to check if the character is a vowel (both lowercase and uppercase).
+3. Use a counter variable to keep track of the number of vowels.
+
+## Solution
+
+```python title="solution.py"
+def count_vowels(s):
+    vowels = "aeiouAEIOU"
+    count = 0
+
+    # Loop through each character in the string
+    for char in s:
+        # Check if the character is a vowel
+        if char in vowels:
+            count += 1
+
+    return count
+```

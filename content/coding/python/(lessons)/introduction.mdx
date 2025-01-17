@@ -13,7 +13,7 @@ Python syntax refers to the set of rules that defines the combinations of symbol
 
 ## Comments
 
-Comments are used to explain code and are ignored by the interpreter. 
+Comments are used to explain code and are ignored by the interpreter.
 - Single-line comments start with `#`.
 
 ```python
@@ -44,8 +44,11 @@ is_student = True # Boolean
 
 The `print()` function is used to output data to the console.
 
-```python
-print("Hello, World!") # Ouput: Hello World!
+```python title="Example"
+print("Hello, World!")
+```
+```plaintext title="Output"
+Hello, World!
 ```
 
 ## Indentation
@@ -53,11 +56,12 @@ print("Hello, World!") # Ouput: Hello World!
 
 Indentation is crucial in Python. It defines the blocks of code. For example, in loops and functions, indentation indicates which statements belong to the block.
 
-```python
+```python title="Example"
 if x > 0:
     print("x is positive")
-
-# Output: x is positive
+```
+```plaintext title="Output"
+x is positive
 ```
 
 ## Basic Data Structures
@@ -108,26 +112,36 @@ else:
 Loops are used to execute a block of code multiple times.
 
 - `for` loops
-  
+
   Iterates over a sequence (e.g., list, tuple, string).
 
-```python
+```python title="Example"
 for i in range(5):
     print(i)
-
-# Output: 0 1 2 3 4
+```
+```plaintext title="Output"
+0
+1
+2
+3
+4
 ```
 
 - `while` loops
 
   Repeats a block of code as long as the condition is true.
 
-```python
+```python title="Example"
 i = 0
 
 while i < 5:
     print(i)
     i += 1
-
-# Output: 0 1 2 3 4
+```
+```plaintext title="Output"
+0
+1
+2
+3
+4
 ```

@@ -8,34 +8,35 @@ Conditionals are statements that allow you to execute certain pieces of code bas
 
 The `if` statement is used to execute a block of code only if a condition is true.
 
-```python
+```python title="Example"
 age = 18
 if age >= 18:
     print("You are an adult.")
-
-
-# Output: You are an adult.
+```
+```plaintext title="Output"
+You are an adult.
 ```
 
 ## `if`-`else` Statement
 
 The `if`-`else` statement is used to execute one block of code if the condition is true, and another block if the condition is false.
 
-```python
+```python title="Example"
 age = 16
 if age >= 18:
     print("You are an adult.")
 else:
     print("You are not an adult.")
-
-# Output: You are not an adult.
+```
+```plaintext title="Output"
+You are not an adult.
 ```
 
 ## `if`-`elif`-`else` Statement
 
 The `if`-`elif`-`else` statement is used to execute one block of code if the first condition is true, another block if the first condition is false and the second condition is true, and another block if all conditions are false.
 
-```python
+```python title="Example"
 age = 16
 if age >= 18:
     print("You are an adult.")
@@ -43,15 +44,16 @@ elif age >= 13:
     print("You are a teenager.")
 else:
     print("You are a child.")
-
-# Output: You are a teenager.
+```
+```plaintext title="Output"
+You are a teenager.
 ```
 
 ## Nested `if` Statements
 
 You can nest `if` statements inside other `if` statements.
 
-```python
+```python title="Example"
 x = 10
 if x > 0:
     if x % 2 == 0:
@@ -60,41 +62,45 @@ if x > 0:
         print("Positive and odd.")
 else:
     print("Negative or zero.")
-
-# Output: Positive and even.
+```
+```plaintext title="Output"
+Positive and even.
 ```
 
 ## Short-Hand `if` Statement
 
 You can write an `if` statement on one line if it has only one statement.
 
-```python
+```python title="Example"
 age = 18
 if age >= 18: print("You are an adult.")
-
-# Output: You are an adult.
+```
+```plaintext title="Output"
+You are an adult.
 ```
 
 ## Short-Hand `if`-`else` Statement
 
 You can write an `if`-`else` statement on one line.
 
-```python
+```python title="Example"
 age = 16
 print("You are an adult.") if age >= 18 else print("You are not an adult.")
-
-# Output: You are not an adult.
+```
+```plaintext title="Output"
+You are not an adult.
 ```
 
 ## Short-Hand `if`-`elif`-`else` Statement
 
 You can write an `if`-`elif`-`else` statement on one line.
 
-```python
+```python title="Example"
 age = 16
 print("You are an adult.") if age >= 18 else print("You are a teenager.") if age >= 13 else print("You are a child.")
-
-# Output: You are a teenager.
+```
+```plaintext title="Output"
+You are a teenager.
 ```
 
 ## Logical Operators
@@ -103,37 +109,39 @@ Logical operators are used to combine conditional statements.
 
 - `and`: Returns `True` if both statements are true.
 
-```python
+```python title="Example"
 age = 20
 is_student = True
 
 if age >= 18 and is_student:
     print("You are eligible for a student discount.")
-
-# Output: You are eligible for a student discount.
+```
+```plaintext title="Output"
+You are eligible for a student discount.
 ```
 
 - `or`: Returns `True` if one of the statements is true.
 
-```python
+```python title="Example"
 age = 20
 is_student = True
 
 if age < 18 or is_student:
     print("You are eligible for a student discount.")
-
-# Output: You are eligible for a student discount.
+```
+```plaintext title="Output"
+You are eligible for a student discount.
 ```
 
 - `not`: Reverse the result, returns `False` if the result is true.
 
-```python
+```python title="Example"
 age = 20
 is_student = True
 
 if not age >= 18:
     print("You are not an adult.")
-
-# Output: You are not an adult.
 ```
-
+```plaintext title="Output"
+You are not an adult.
+```

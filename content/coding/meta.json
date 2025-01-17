@@ -7,6 +7,8 @@
     "./sql",
     "---Exercises---",
     "./python/exercises",
-    "---Quizzes & Exams---"
+    "---Quizzes & Exams---",
+    "./python/quizzes",
+    "./python/exams"
   ]
 }

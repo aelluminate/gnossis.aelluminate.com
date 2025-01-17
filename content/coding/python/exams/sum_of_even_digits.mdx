@@ -1,0 +1,57 @@
+---
+title: "Sum of Even Digits"
+---
+
+## Problem Statement
+
+Write a Python function `sum_of_even_digits(number)` that takes an integer number as input and returns the sum of all even digits in the number. If the number does not contain any even digits, return 0.
+
+<Callout title="Example" type="info">
+Input: `1234` <br />
+Output: `6` (because `2 + 4 = 6`)
+</Callout>
+<Callout title="Example" type="info">
+Input: `1357` <br />
+Output: `0` (no even digits)
+</Callout>
+<Callout title="Example" type="info">
+Input: `2468` <br />
+Output: `20` (because `2 + 4 + 6 + 8 = 20`)
+</Callout>
+
+## Instructions
+
+1. Implement the function `sum_of_even_digits(number)` in the file `solution.py`.
+2. Do not use any external libraries or advanced Python features (e.g., list comprehensions, lambda functions, etc.).
+3. Use only the following Python concepts:
+   - Variables and Data Types
+   - Conditionals
+   - Loops
+   - Type Casting
+4. Test your solution by running `test.py`. The script will automatically check your implementation against 10 test cases.
+
+## Hints
+
+1. Convert the number to a string to easily iterate through its digits.
+2. Use a loop to check each digit.
+3. Use the modulo operator `%` to determine if a digit is even.
+4. Accumulate the sum of even digits in a variable.
+
+## Solution
+
+```python title="solution.py"
+def sum_of_even_digits(number):
+    # Convert the number to a string to iterate through digits
+    number_str = str(number)
+    total = 0
+
+    # Loop through each character in the string
+    for digit_char in number_str:
+        # Convert the character back to an integer
+        digit = int(digit_char)
+        # Check if the digit is even
+        if digit % 2 == 0:
+            total += digit
+
+    return total
+```

@@ -1,0 +1,56 @@
+---
+title: "Number to Words"
+---
+
+
+Write a Python `function number_to_words(num)` that takes an integer `num` (where `0 <= num <= 9999`) as input and returns the English words representation of the number. The function should return the words in the following format:
+
+- For numbers less than 20, return the word directly (e.g., `5` → `"five"`).
+- For numbers between 20 and 99, return the word in the format `"twenty-five"`.
+- For numbers between 100 and 999, return the word in the format `"one hundred twenty-five"`.
+- For numbers between 1000 and 9999, return the word in the format `"one thousand two hundred thirty-four"`.
+
+If the input number is `0`, return `"zero"`.
+
+<Callout title="Example" type="info">
+Input: `123` <br />
+Output: `"one hundred twenty-three"`
+</Callout>
+<Callout title="Example" type="info">
+Input: `1000` <br />
+Output: `"one thousand"`
+</Callout>
+<Callout title="Example" type="info">
+Input: `9999` <br />
+Output: `"nine thousand nine hundred ninety-nine"`
+</Callout>
+
+## Instructions
+
+1. Implement the function `number_to_words(num)` in the file `solution.py`.
+2. Do not use any external libraries or advanced Python features (e.g., dictionaries, list comprehensions, etc.).
+3. Use only the following Python concepts:
+   - Variables and Data Types
+   - Conditionals
+   - Loops
+   - Type Casting
+4. Test your solution by running `test.py`. The script will automatically check your implementation against 10 test cases.
+
+## Hints
+
+1. Break the problem into smaller parts:
+    - Handle numbers less than 20.
+    - Handle numbers between 20 and 99.
+    - Handle numbers between 100 and 999.
+    - Handle numbers between 1000 and 9999.
+2. Use conditionals to determine the range of the number.
+3. Use loops and type casting to extract digits and construct the word representation.
+4. Pay attention to edge cases, such as `0` and numbers with trailing zeros (e.g., `100`, `1000`).
+
+## Solution
+
+```python title="solution.py"
+def number_to_words(num):
+    # Remove the pass statement and write your code here!
+    pass
+```
