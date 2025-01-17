@@ -1,41 +1,12 @@
-import "@/assets/globals.css"
-import { RootProvider } from "fumadocs-ui/provider"
+import { Metadata } from "next"
 import type { ReactNode } from "react"
 
-import { Metadata } from "next"
-import { geistSans, spaceGroteskMono } from "@/lib/fonts"
+import { RootProvider } from "fumadocs-ui/provider"
 
-export const metadata: Metadata = {
-  title: {
-    template: "%s | Gnossis",
-    default: "Gnossis",
-  },
-  description: `Boost your productivity with valuable web development resources and educational guides.`,
-  openGraph: {
-    title: "Gnossis",
-    description:
-      "Boost your productivity with valuable web development resources and educational guides.",
-    url: "https://ca-resources.vercel.app",
-    siteName: "Gnossis",
-    images: [
-      {
-        url: "https://ca-resources.vercel.app/banner.png",
-        width: 1920,
-        height: 1080,
-        alt: "Gnossis",
-      },
-    ],
-    locale: "en_US",
-    type: "website",
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Gnossis",
-    description:
-      "Boost your productivity with valuable web development resources and educational guides.",
-    images: ["https://ca-resources.vercel.app/banner.png"],
-  },
-}
+import "@/assets/globals.css"
+import { geistSans, spaceGroteskMono } from "@/lib/fonts"
+import { SiteData } from "@/lib/metadata"
+export const metadata: Metadata = SiteData
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
@@ -46,13 +17,21 @@ export default function Layout({ children }: { children: ReactNode }) {
     >
       <body className="relative">
         <RootProvider
+          theme={{
+            enabled: true,
+            defaultTheme: "light",
+          }}
           search={{
             options: {
               defaultTag: "all",
               tags: [
                 {
-                  name: "Lectures",
-                  value: "lectures",
+                  name: "Computer Science",
+                  value: "computer-science",
+                },
+                {
+                  name: "Coding",
+                  value: "coding",
                 },
               ],
             },
@@ -64,5 +43,3 @@ export default function Layout({ children }: { children: ReactNode }) {
     </html>
   )
 }
-
-// ʕ•ᴥ•ʔ

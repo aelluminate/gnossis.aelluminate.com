@@ -1,4 +1,4 @@
-import { lectures } from "@/lib/source"
+import { coding } from "@/lib/source"
 import type { Metadata } from "next"
 import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page"
 import { notFound } from "next/navigation"
@@ -8,14 +8,16 @@ import { getGithubLastEdit } from "fumadocs-core/server"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
   const params = await props.params
-  const page = lectures.getPage(params.slug)
+  const page = coding.getPage(params.slug)
   if (!page) notFound()
 
+  const filePath = `content/coding/${page.file.flattenedPath}.mdx`
+
   const time = await getGithubLastEdit({
-    owner: "bryan308",
-    repo: "ca-resources",
+    owner: "aelluminate",
+    repo: "gnossis",
     sha: "main",
-    path: `content/resources/${page.file.flattenedPath}.mdx`,
+    path: filePath,
   })
 
   return (
@@ -26,10 +28,10 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
         single: false,
       }}
       editOnGithub={{
-        repo: "ca-resources",
-        owner: "bryan308",
+        repo: "gnossis",
+        owner: "aelluminate",
         sha: "main",
-        path: `content/resources/${page.file.flattenedPath}.mdx`,
+        path: filePath,
       }}
       toc={page.data.toc}
       full={page.data.full}
@@ -44,12 +46,12 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
 }
 
 export function generateStaticParams() {
-  return lectures.generateParams()
+  return coding.generateParams()
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug?: string[] }> }) {
   const params = await props.params
-  const page = lectures.getPage(params.slug)
+  const page = coding.getPage(params.slug)
   if (!page) notFound()
 
   return {

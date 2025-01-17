@@ -7,8 +7,6 @@ import { Plus } from "lucide-react"
 import WordReveal from "@/components/ui/word-reveal"
 import {
   ActionButton,
-  FeaturedGuides,
-  GitHubButton,
   HeroParagraph,
   ResourcesMarquee,
   SectionTitle,

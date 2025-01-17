@@ -1,4 +1,4 @@
-import { guides } from "@/lib/source"
+import { lectures } from "@/lib/source"
 import { createFromSource } from "fumadocs-core/search/server"
 
-export const { GET } = createFromSource(guides)
+export const { GET } = createFromSource(lectures)
