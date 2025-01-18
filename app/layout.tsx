@@ -5,7 +5,7 @@ import { RootProvider } from "fumadocs-ui/provider"
 
 import "@/assets/globals.css"
 import { geistSans, spaceGroteskMono } from "@/lib/fonts"
-import { SiteData } from "@/lib/metadata"
+import { metadata as SiteData } from "@/lib/metadata"
 export const metadata: Metadata = SiteData
 
 export default function Layout({ children }: { children: ReactNode }) {
@@ -23,7 +23,6 @@ export default function Layout({ children }: { children: ReactNode }) {
           }}
           search={{
             options: {
-              defaultTag: "all",
               tags: [
                 {
                   name: "Computer Science",

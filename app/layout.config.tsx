@@ -49,7 +49,7 @@ export const baseOptions: HomeLayoutProps = {
           text: "Computer Science",
           description:
             "Learn the basics to advance topics of computer science, machine learning, data science, and more.",
-          url: "/computer-science",
+          url: "/docs/computer-science",
           menu: {
             className: "lg:col-start-2",
           },
@@ -67,7 +67,7 @@ export const baseOptions: HomeLayoutProps = {
           icon: <Code />,
           text: "Coding",
           description: "Learn the basics of programming languages.",
-          url: "/coding",
+          url: "/docs/coding",
           menu: {
             className: "lg:col-start-3 lg:row-start-1",
           },

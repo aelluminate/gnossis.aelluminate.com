@@ -1,17 +1,20 @@
-import { computerScience } from "@/lib/source"
 import type { Metadata } from "next"
-import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page"
 import { notFound } from "next/navigation"
-import { MDXContent } from "@content-collections/mdx/react"
-import { components } from "@/components/shared/mdx-components"
+
+import { DocsPage, DocsBody, DocsTitle, DocsDescription } from "fumadocs-ui/page"
 import { getGithubLastEdit } from "fumadocs-core/server"
+import { MDXContent } from "@content-collections/mdx/react"
+
+import { source } from "@/lib/source"
+import { createMetadata } from "@/lib/metadata"
+import { components } from "@/components/shared/mdx-components"
 
 export default async function Page(props: { params: Promise<{ slug?: string[] }> }) {
   const params = await props.params
-  const page = computerScience.getPage(params.slug)
+  const page = source.getPage(params.slug)
   if (!page) notFound()
 
-  const filePath = `content/computer-science/${page.file.flattenedPath}.mdx`
+  const filePath = `content/docs/computer-science/${page.file.flattenedPath}.mdx`
 
   const time = await getGithubLastEdit({
     owner: "aelluminate",
@@ -46,16 +49,16 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
 }
 
 export function generateStaticParams() {
-  return computerScience.generateParams()
+  return source.generateParams()
 }
 
 export async function generateMetadata(props: { params: Promise<{ slug?: string[] }> }) {
   const params = await props.params
-  const page = computerScience.getPage(params.slug)
+  const page = source.getPage(params.slug)
   if (!page) notFound()
 
-  return {
+  return createMetadata({
     title: page.data.title,
-    description: page.data.description,
-  } satisfies Metadata
+    description: page.data.description ?? "Level up your knowledge with Gnosis.",
+  }) satisfies Metadata
 }
