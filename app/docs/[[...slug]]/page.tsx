@@ -14,7 +14,7 @@ export default async function Page(props: { params: Promise<{ slug?: string[] }>
   const page = source.getPage(params.slug)
   if (!page) notFound()
 
-  const filePath = `content/docs/computer-science/${page.file.flattenedPath}.mdx`
+  const filePath = `content/docs/${page.file.flattenedPath}.mdx`
 
   const time = await getGithubLastEdit({
     owner: "aelluminate",
