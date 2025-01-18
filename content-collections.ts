@@ -1,17 +1,8 @@
 import { defineConfig } from "@content-collections/core"
-import { codingMeta, computerScienceMeta } from "./lib/colletions/metas"
-import { coding, computerScience } from "./lib/colletions/pages"
+import { meta } from "./lib/colletions/metas"
+import { docs} from "./lib/colletions/docs"
 
-const meta = [
-  codingMeta,
-  computerScienceMeta
-]
-
-const pages = [
-  coding,
-  computerScience
-]
 
 export default defineConfig({
-  collections: [...meta, ...pages],
+  collections: [meta, docs],
 })
