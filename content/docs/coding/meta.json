@@ -1,5 +1,6 @@
 {
   "title": "Programming Languages",
+  "root": true,
   "pages": [
     "index",
     "---Languages---",

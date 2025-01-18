@@ -1,4 +1,5 @@
 {
 	"title": "Introduction",
+	"root": true,
 	"pages": ["index", "---Machine Learning---",  "..."]
 }
