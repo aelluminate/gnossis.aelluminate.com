@@ -1,0 +1,166 @@
+---
+title: Installation
+description: Install MongoDB Community Edition on Ubuntu
+---
+
+To install MongoDB 8.0 Community Edition on LTS (with long-term support) releases of Ubuntu Linux, we will be using `apt` package manager.
+
+<Callout title="Version Specific" type="info">
+To install a different version of MongoDB Community Edition, use the version-specific installation instructions provided on the official MongoDB documentation. Here's the link for the [MongoDB installation instructions](https://www.mongodb.com/docs/manual/tutorial/install-mongodb-on-ubuntu/#std-label-install-mdb-community-ubuntu).
+</Callout>
+
+## Considerations
+
+There are a few considerations to keep in mind before installing MongoDB:
+
+### Platform Support
+
+MongoDB 8.0 Community Edition supports the following **64-bit** Ubuntu LTS releases on **x86_64** architecture:
+
+- 24.04 LTS ("Noble")
+- 22.04 LTS ("Jammy")
+- 20.04 LTS ("Focal")
+
+MongoDB only supports the 64-bit version of these platforms.
+
+## Install MongoDB Community Edition
+
+Follow these steps to install MongoDB Community Edition on Ubuntu using `apt` package manager:
+
+### 1. Import the MongoDB GPG Key
+
+From a terminal, install `gnupg` and `curl` if you haven't already:
+
+```bash
+sudo apt-get install gnupg curl
+```
+
+To import the MongoDB public GPG key, use the following command:
+
+```bash
+curl -fsSL https://www.mongodb.org/static/pgp/server-8.0.asc | \
+   sudo gpg -o /usr/share/keyrings/mongodb-server-8.0.gpg \
+   --dearmor
+```
+
+### 2. Create a List File for MongoDB
+
+Create the list file for MongoDB with the following command:
+
+<Tabs items={["Ubuntu 24.04 (Noble)", "Ubuntu 22.04 (Jammy)", "Ubuntu 20.04 (Focal)"]}>
+  <Tab value="Ubuntu 24.04 (Noble)">
+    Create the list file for Ubuntu 24.04 (Noble):
+
+    ```bash
+    echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu noble/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+    ```
+  </Tab>
+  <Tab value="Ubuntu 22.04 (Jammy)">
+  Create the list file for Ubuntu 22.04 (Jammy):
+  
+  ```bash
+  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu jammy/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+  ```
+  </Tab>
+  <Tab value="Ubuntu 20.04 (Focal)">
+  Create the list file for Ubuntu 20.04 (Focal):
+  
+  ```bash
+  echo "deb [ arch=amd64,arm64 signed-by=/usr/share/keyrings/mongodb-server-8.0.gpg ] https://repo.mongodb.org/apt/ubuntu focal/mongodb-org/8.0 multiverse" | sudo tee /etc/apt/sources.list.d/mongodb-org-8.0.list
+  ```
+  </Tab>
+</Tabs>
+
+### 3. Update the Package List
+
+To reload/update the package list, run the following command:
+
+```bash
+sudo apt-get update
+```
+
+### 4. Install MongoDB Community Edition
+
+You can install the latest stable version of MongoDb or specific version of MongoDB.
+
+<Tabs items={["Latest Release", "Specific Release Version"]}>
+  <Tab value="Latest Release">
+    To install the latest stable version, issue the following
+
+    ```bash
+    sudo apt-get install -y mongodb-org
+    ```
+  </Tab>
+  <Tab value="Specific Release Version">
+  To install a specific release, you must specify each component package individually along with the version number, as in the following example:
+
+  ```bash
+  sudo apt-get install -y mongodb-org=8.0.4 mongodb-org-database=8.0.4 mongodb-org-server=8.0.4 mongodb-mongosh mongodb-org-mongos=8.0.4 mongodb-org-tools=8.0.4
+  ```
+  </Tab>
+</Tabs>
+
+## Run MongoDB (`systemd`/`systemctl`)
+
+### 1. Start MongoDB
+
+You can now start the `mongod` process by issuing the following command:
+
+```bash
+sudo systemctl start mongod
+```
+
+<Callout title="Error" type="error">
+If you encounter an error similar to following when starting `mongod`: `Failed to start mongod.service: Unit mongod.service not found.` Run the following command to create the `mongod` service:
+
+```bash
+sudo systemctl daemon-reload
+```
+Then run the `start` command again:
+
+```bash
+sudo systemctl start mongod
+```
+</Callout>
+
+### 2. Verify that MongoDB has started successfully
+
+To verify that MongoDB has started successfully, check the `mongod` service status:
+
+```bash
+sudo systemctl status mongod
+```
+
+Optionally, you can ensure that MongoDB will start following a system reboot by issuing the following command:
+
+```bash
+sudo systemctl enable mongod
+```
+
+### 3. Stop MongoDB
+
+As needed, you can stop the `mongod` process by issuing the following command:
+
+```bash
+sudo systemctl stop mongod
+```
+
+### 4. Restart MongoDB
+
+To restart the `mongod` process, issue the following command:
+
+```bash
+sudo systemctl restart mongod
+```
+
+<Callout title="Note" type="info">
+You can follow the state of the process for errors, messages, or other issues by watching the output in the `/var/log/mongodb/mongod.log` file.
+</Callout>
+
+### 5. Using the MongoDB Shell
+
+To start the `mongosh` session on the same host machine as the `mongod`. You can run `mongosh` without any command-line options to connect to a MongoDB instance running on the default port (`27017`) on the localhost:
+
+```bash
+mongosh
+```
