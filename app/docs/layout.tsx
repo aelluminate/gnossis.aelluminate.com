@@ -6,7 +6,7 @@ import { RootToggle } from "fumadocs-ui/components/layout/root-toggle"
 import { baseOptions } from "@/app/layout.config"
 import { source } from "@/lib/source"
 import { SideBarFooter } from "@/components/shared/sidebar-footer"
-import { RootOptions } from "@/components/shared/options"
+import { RootOptions } from "@/components/shared/root-options"
 
 export default function Layout({ children }: { children: ReactNode }) {
   return (
