@@ -2,19 +2,23 @@ import Image from "next/image"
 import React from "react"
 
 import { HomeLayoutProps } from "fumadocs-ui/layouts/home"
-import { NotebookPen, BrainCircuit, Hammer, LibraryBig, Code, Atom, Info } from "lucide-react"
+import {
+  NotebookPen,
+  BookMarked,
+  BrainCircuit,
+  Hammer,
+  LibraryBig,
+  Code,
+  Atom,
+  Info,
+} from "lucide-react"
 
 import Preview from "@/public/banner.png"
 
 export const baseOptions: HomeLayoutProps = {
   githubUrl: "https://github.com/aelluminate/gnossis",
   nav: {
-    title: (
-      <>
-        <LibraryBig />
-        Gnossis
-      </>
-    ),
+    title: <div className="flex pl-2 font-space-grotesk text-2xl">Gnossis</div>,
     enableSearch: true,
   },
   links: [
@@ -37,7 +41,7 @@ export const baseOptions: HomeLayoutProps = {
                 />
               </div>
             ),
-            className: "md:row-span-2",
+            className: "md:row-span-3",
           },
           icon: <Info />,
           text: "Learn more about us.",
@@ -69,7 +73,7 @@ export const baseOptions: HomeLayoutProps = {
           description: "Learn the basics of programming languages.",
           url: "/docs/coding",
           menu: {
-            className: "lg:col-start-3 lg:row-start-1",
+            className: "lg:col-start-2",
           },
         },
         {
@@ -78,7 +82,16 @@ export const baseOptions: HomeLayoutProps = {
           description: "Find projects that you can contribute to.",
           url: "/",
           menu: {
-            className: "lg:col-start-3",
+            className: "lg:col-start-3 lg:row-start-1",
+          },
+        },
+        {
+          icon: <BookMarked />,
+          text: "Bookmarks",
+          description: "Quick access resources and tools.",
+          url: "/docs/bookmarks",
+          menu: {
+            className: "lg:col-start-3 lg:row-start-2",
           },
         },
       ],
