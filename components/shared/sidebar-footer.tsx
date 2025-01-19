@@ -1,10 +1,9 @@
 export function SideBarFooter() {
   return (
-    <footer className="mt-auto flex pt-4">
-      <div className="container flex w-full flex-col items-start justify-between gap-2 p-2">
-        <p className="order-2 text-xs text-stone-800 dark:text-stone-100 md:order-1">
-          &copy; {new Date().getFullYear()} Aelluminate. <br />
-          All rights reserved.
+    <footer className="flex w-full pt-2">
+      <div className="flex w-full flex-col items-start justify-between">
+        <p className="text-xs text-stone-800 dark:text-stone-100">
+          &copy; {new Date().getFullYear()} Aelluminate.
         </p>
       </div>
     </footer>

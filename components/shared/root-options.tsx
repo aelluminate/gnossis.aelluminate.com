@@ -1,5 +1,6 @@
-import { BrainCircuit, Code } from "lucide-react"
+import { BrainCircuit, Code, BookMarked } from "lucide-react"
 import { IconContainer } from "@/components/shared/icon-container"
+import { describe } from "node:test"
 
 export const RootOptions = [
   {
@@ -13,5 +14,11 @@ export const RootOptions = [
     icon: <IconContainer icon={Code} />,
     description: "From zero to mastery.",
     url: "/docs/coding",
+  },
+  {
+    title: "Bookmarks",
+    icon: <IconContainer icon={BookMarked} />,
+    description: "Quick access.",
+    url: "/docs/bookmarks",
   },
 ]
